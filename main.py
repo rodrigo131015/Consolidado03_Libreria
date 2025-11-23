@@ -52,7 +52,7 @@ def menu():
             else:
                 for i, j in items:
                     print(f"- {i}: {j}")
-        #Preguntamos si desea salir del programa, si es asi rompe el ciclo
+        #Preguntamos si desea salir del programa, si es asi rompe el ciclo, si no es vuelve al menu
         elif op == "6":
             salir = input("Seguro que desea salir (SI/NO): ").upper()
             if salir == "SI":
