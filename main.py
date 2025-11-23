@@ -28,7 +28,8 @@ def menu():
                 print("Vendido 1. Queda:", quedan)
             else:
                 print("Stock insuficiente.")
-        #
+        #Ingresamos nombre del libro a buscar, creamos una variable dato con la cantidad que hay en stock,
+        #Finalmente vemos si dato es diferente de None muestra el nombre del librp junto con su cantidad; si no imprime libro inexistente
         elif op == "3":
             nombre = input("Ingrese nombre de libro a buscar: ").strip().capitalize()
             dato = buscarLibro(libreria, nombre)
@@ -36,12 +37,14 @@ def menu():
                 print(nombre, "->", dato)
             else:
                 print("Libro inexistente.")
+        #Ingresamos el nombre del libro a eliminar, llamamos a la funcion elimianrlibro la cual devuelve true o false
         elif op == "4":
             nombre = input("Ingrese nombre de libro a eliminar: ").strip().capitalize()
             if eliminarLibro(libreria, nombre):
                 print("Libro eliminado.")
             else:
                 print("Libro inexistente.")
+        #Creamos una variable items y llamamos a la funcion listarLibros, luego si items esta vacion imprime "Inventario vacio", si no imprime la lista
         elif op == "5":
             items = listarLibros(libreria)
             if not items:
@@ -49,6 +52,7 @@ def menu():
             else:
                 for i, j in items:
                     print(f"- {i}: {j}")
+        #Preguntamos si desea salir del programa, si es asi rompe el ciclo
         elif op == "6":
             salir = input("Seguro que desea salir (SI/NO): ").upper()
             if salir == "SI":
